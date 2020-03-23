@@ -1,0 +1,72 @@
+﻿@using ShortCutURL.Models.DataModel
+@model List<ShortUrl>
+
+@{
+    ViewBag.Title = "Статистика использования сокращенных ссылок";
+}
+<h2>Статистика использования сокращенных ссылок</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<table>
+    <tr>
+        <th >
+            Идентификатор
+        </th>
+        <th >
+            Сокращенный URL
+        </th>
+        <th >
+            Полный URL
+        </th>
+        <th>
+            Дата создания
+        </th>
+        <th>
+            Количество переходов
+        </th>
+        <th>
+            Удален
+        </th>
+        <th>
+            Действия
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortUrlValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullUrlValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Count)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+            </td>
+        </tr>
+    }
+</table>
+}
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }

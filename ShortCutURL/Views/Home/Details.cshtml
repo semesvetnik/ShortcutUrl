@@ -1,0 +1,47 @@
+﻿@model ShortCutURL.Models.DataModel.ShortUrl
+
+@{
+    ViewBag.Title = "Сокращенный URL";
+}
+
+    <h2>Сокращенный URL</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FullUrlValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullUrlValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortUrlValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortUrlValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Count)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Count)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

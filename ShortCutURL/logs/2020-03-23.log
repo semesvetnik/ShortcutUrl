@@ -1,0 +1,16 @@
+2020-03-23 10:20:23.5073 WARN System.String UpdateTransitions(System.String), количество переходов по сокращенному URL НЕ обновилось.
+2020-03-23 10:20:36.3791 INFO ShortCutURL.Models.DataModel.ShortUrl Get(System.String), сокращенный URL fullUrl= https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_routing.htm найден.
+2020-03-23 10:20:36.4070 INFO Boolean FindShortUrl(System.String), сокращенный URL найден= 1519a561-15aa-459d-b514-daf1f2c8163e.
+2020-03-23 10:20:36.5730 INFO Int32 Create(ShortCutURL.Models.DataModel.ShortUrl), сокращенный URL id= 4 создан.
+2020-03-23 10:20:52.1648 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-03-23 10:20:58.2527 INFO Void Delete(Int32), сокращенный URL id= 2 удален.
+2020-03-23 10:20:58.2527 INFO Void Delete(Int32), сокращенный URL id= 2 не удален.
+2020-03-23 10:20:58.2527 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-03-23 10:21:21.9297 INFO System.String UpdateTransitions(System.String), количество переходов по сокращенному URL обновилось.
+2020-03-23 10:21:27.8108 INFO Void Delete(Int32), сокращенный URL id= 2 удален.
+2020-03-23 10:21:27.8108 INFO Void Delete(Int32), сокращенный URL id= 2 не удален.
+2020-03-23 10:21:27.8138 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-03-23 10:21:37.0552 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), сокращенный URL id= 3 найден.
+2020-03-23 10:26:08.0615 WARN System.String UpdateTransitions(System.String), количество переходов по сокращенному URL НЕ обновилось.
+2020-03-23 10:26:15.3330 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-03-23 10:26:17.3469 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), сокращенный URL id= 4 найден.
