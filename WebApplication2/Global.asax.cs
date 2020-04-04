@@ -1,14 +1,15 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using NLog;
 
-namespace ShortCutURL
+namespace WebApplication2
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        public static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

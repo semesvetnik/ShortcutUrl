@@ -15,12 +15,16 @@ namespace ShortCutURL.Models.Repositories
     /// </summary>
     public class ShortUrlRepository : IShortUrlRepository
     {
-        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        
+        #region Properties
+
         /// <summary>
         /// Контекст сокращенного URL.
         /// </summary>
         private ShortUrlContext shortUrlContext = new ShortUrlContext();
+
+        #endregion
+
+        #region Methods
 
         /// <summary>
         /// Создает сокращенный URL по полному в БД.
@@ -31,6 +35,8 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 shortUrlContext.ShortUrls.Add(shortUrl);
                 shortUrlContext.SaveChanges();
 
@@ -39,13 +45,13 @@ namespace ShortCutURL.Models.Repositories
                 if (!id.HasValue)
                     throw new Exception("Ошибка создания id сокращенного URL.");
 
-                logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {shortUrl.ID} создан.");
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {shortUrl.ID} создан.");
                 return id.Value;
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
 
@@ -57,9 +63,11 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 if (shortUrl.ID == null)
                 {
-                    logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL не обновлен.");
+                    MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL не обновлен.");
 
                     return;
                 }
@@ -77,12 +85,12 @@ namespace ShortCutURL.Models.Repositories
 
                 shortUrlContext.SaveChanges();
 
-                logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {shortUrl.ID} обновлен.");
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {shortUrl.ID} обновлен.");
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
 
@@ -94,6 +102,8 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 ShortUrl result = shortUrlContext.ShortUrls.Find(shortUrlView.ID);
 
                 if (result == null)
@@ -105,12 +115,12 @@ namespace ShortCutURL.Models.Repositories
 
                 shortUrlContext.SaveChanges();
 
-                logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {shortUrlView.ID} обновлен.");
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {shortUrlView.ID} обновлен.");
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
 
@@ -122,21 +132,23 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 ShortUrl shortUrl = shortUrlContext.ShortUrls.Find(id);
 
                 if (shortUrl != null)
                 {
                     shortUrl.IsDeleted = true;
                     shortUrlContext.SaveChanges();
-                    logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {id} удален.");
+                    MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {id} удален.");
                 }
-                
-                logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {id} не удален.");
+
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {id} не удален.");
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
 
@@ -149,17 +161,19 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 DbSet<ShortUrl> shortUrls = shortUrlContext.ShortUrls;
 
                 ShortUrl result = shortUrls?.Where(el => el.FullUrlValue == fullUrl).FirstOrDefault();
 
-                logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL fullUrl= {fullUrl} найден.");
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL fullUrl= {fullUrl} найден.");
                 return result;
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
 
@@ -172,17 +186,19 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 DbSet<ShortUrl> shortUrls = shortUrlContext.ShortUrls;
 
                 ShortUrl result = shortUrls?.Where(el => el.ID == id).FirstOrDefault();
 
-                logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {id} найден.");
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL id= {id} найден.");
                 return result;
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
 
@@ -194,15 +210,17 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 List<ShortUrl> result = shortUrlContext.ShortUrls.Where(el => !el.IsDeleted).ToList();
-                logger.Info($"{MethodBase.GetCurrentMethod()}, список неудаленных URL создан.");
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, список неудаленных URL создан.");
 
                 return result;
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
 
@@ -215,15 +233,17 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 bool result = shortUrlContext.ShortUrls.Any(el => el.ShortUrlValue == shortUrl);
-                logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL найден= {shortUrl}.");
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, сокращенный URL найден= {shortUrl}.");
 
                 return result;
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
 
@@ -236,15 +256,17 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 bool result = shortUrlContext.ShortUrls.Any(el => el.FullUrlValue == fullUrl);
-                logger.Info($"{MethodBase.GetCurrentMethod()}, наличие полного URL= {result}.");
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, наличие полного URL= {result}.");
 
                 return result;
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
 
@@ -257,6 +279,8 @@ namespace ShortCutURL.Models.Repositories
         {
             try
             {
+                MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, start.");
+
                 ShortUrl shortUrl = shortUrlContext.ShortUrls.FirstOrDefault(t => t.ShortUrlValue == shortUrlValue);
 
                 if (shortUrl != default(ShortUrl))
@@ -264,18 +288,20 @@ namespace ShortCutURL.Models.Repositories
                     shortUrl.Count += 1;
                     shortUrlContext.SaveChanges();
 
-                    logger.Info($"{MethodBase.GetCurrentMethod()}, количество переходов по сокращенному URL обновилось.");
+                    MvcApplication.Logger.Info($"{MethodBase.GetCurrentMethod()}, количество переходов по сокращенному URL обновилось.");
                     return shortUrl.FullUrlValue;
                 }
 
-                logger.Warn($"{MethodBase.GetCurrentMethod()}, количество переходов по сокращенному URL НЕ обновилось.");
+                MvcApplication.Logger.Warn($"{MethodBase.GetCurrentMethod()}, количество переходов по сокращенному URL НЕ обновилось.");
                 return null;
             }
             catch (Exception e)
             {
-                logger.Error(e.Message, e.StackTrace);
-                throw;
+                MvcApplication.Logger.Error(e.Message, e.StackTrace);
+                throw new Exception($"{ MethodBase.GetCurrentMethod() }, {e.Message}");
             }
         }
+
+        #endregion
     }
 }
