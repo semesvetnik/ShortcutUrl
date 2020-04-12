@@ -62,7 +62,7 @@ namespace ShortCutURL.Models.Services
 
                 short_url = new ShortUrl
                 {
-                    ShortUrlValue = GetUrlTail(url_guid, SHORT_URL_LENGTH),
+                    ShortUrlValue = GetUrlTail(url_guid, SHORT_URL_LENGTH),//"http://Home/Index/" + 
                     FullUrlValue = fullUrl,
                     Count = 0,
                     IsDeleted = false,

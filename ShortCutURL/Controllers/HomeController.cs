@@ -19,8 +19,7 @@ namespace ShortCutURL.Controllers
 
         #endregion
 
-        [HttpGet]
-        //[Route("/{url}")]
+        [Route("Home/Index/{shortUrlValue}")]
         public ActionResult Index(string shortUrlValue)
         {
             string fullUrlValue = ShortUrlService.UpdateTransitions(shortUrlValue);
@@ -102,7 +101,7 @@ namespace ShortCutURL.Controllers
         }
 
         [HttpGet]
-        public ViewResult Statistic()
+        public ViewResult Statistics()
         {
             List<ShortUrl> result = ShortUrlService.GetShortUrlList();
 

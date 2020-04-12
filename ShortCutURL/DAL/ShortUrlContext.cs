@@ -24,6 +24,5 @@ namespace ShortCutURL.DAL
             // Предотвращает множественное преобразование имен таблиц.
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
-
     }
 }

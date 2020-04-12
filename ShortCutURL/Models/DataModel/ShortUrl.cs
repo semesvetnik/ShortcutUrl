@@ -26,7 +26,7 @@ namespace ShortCutURL.Models.DataModel
         /// Сокращенный URL.
         /// </summary>
         [Display(Name = "Сокращенный URL", Prompt = "Сокращенный URL", Description = "Сокращенный URL")]
-        [Required(ErrorMessage = "Сокращенный URL не верный")]
+        //[Url(ErrorMessage = "Некорректный Url")]
         public string ShortUrlValue { get; set; }
 
         /// <summary>
