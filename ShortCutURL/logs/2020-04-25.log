@@ -1,0 +1,49 @@
+2020-04-25 11:21:12.7040 INFO System.String UpdateTransitions(System.String), start.
+2020-04-25 11:21:12.7269 INFO System.String UpdateTransitions(System.String), start.
+2020-04-25 11:21:14.3019 WARN System.String UpdateTransitions(System.String), количество переходов по сокращенному URL Ќ≈ обновилось.
+2020-04-25 11:21:22.5421 INFO ShortCutURL.Models.DataModel.ShortUrl Create(System.String), start.
+2020-04-25 11:21:22.5431 INFO Boolean IsValid(System.String), start.
+2020-04-25 11:21:22.5431 INFO ShortCutURL.Models.DataModel.ShortUrl Get(System.String), start.
+2020-04-25 11:21:22.5730 INFO ShortCutURL.Models.DataModel.ShortUrl Get(System.String), сокращенный URL fullUrl= https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_routing.htm найден.
+2020-04-25 11:21:22.5730 INFO Boolean FindShortUrl(System.String), start.
+2020-04-25 11:21:22.5989 INFO Boolean FindShortUrl(System.String), сокращенный URL найден= fac75651-6188-4f43-898d-32e944b3a016.
+2020-04-25 11:21:22.5989 INFO System.String GetUrlTail(System.String, Int32), start.
+2020-04-25 11:21:22.5989 INFO Int32 Create(ShortCutURL.Models.DataModel.ShortUrl), start.
+2020-04-25 11:21:22.7355 INFO Int32 Create(ShortCutURL.Models.DataModel.ShortUrl), сокращенный URL id= 5 создан.
+2020-04-25 11:21:25.7945 INFO System.String UpdateTransitions(System.String), start.
+2020-04-25 11:21:25.7945 INFO System.String UpdateTransitions(System.String), start.
+2020-04-25 11:21:25.7945 WARN System.String UpdateTransitions(System.String), количество переходов по сокращенному URL Ќ≈ обновилось.
+2020-04-25 11:21:32.2864 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:21:32.2864 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:21:32.2864 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-04-25 11:22:47.2729 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:22:47.2938 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:22:48.8114 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-04-25 11:22:56.7534 INFO ShortCutURL.Models.DataModel.ShortUrlView Get(Int32), start.
+2020-04-25 11:22:56.7534 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), start.
+2020-04-25 11:22:56.7534 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), сокращенный URL id= 3 найден.
+2020-04-25 11:23:01.3770 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:23:01.3770 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:23:01.3770 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-04-25 11:23:03.1534 INFO ShortCutURL.Models.DataModel.ShortUrlView Get(Int32), start.
+2020-04-25 11:23:03.1534 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), start.
+2020-04-25 11:23:03.1534 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), сокращенный URL id= 4 найден.
+2020-04-25 11:23:04.5940 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:23:04.5940 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:23:04.5940 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-04-25 11:23:05.9146 INFO ShortCutURL.Models.DataModel.ShortUrlView Get(Int32), start.
+2020-04-25 11:23:05.9146 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), start.
+2020-04-25 11:23:05.9146 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), сокращенный URL id= 5 найден.
+2020-04-25 11:23:07.9221 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:23:07.9221 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:23:07.9221 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-04-25 11:23:09.5699 INFO Void Delete(Int32), start.
+2020-04-25 11:23:09.5699 INFO Void Delete(Int32), start.
+2020-04-25 11:23:09.7115 INFO Void Delete(Int32), сокращенный URL id= 5 удален.
+2020-04-25 11:23:09.7115 INFO Void Delete(Int32), сокращенный URL id= 5 не удален.
+2020-04-25 11:23:09.7115 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:23:09.7115 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), start.
+2020-04-25 11:23:09.7155 INFO System.Collections.Generic.List`1[ShortCutURL.Models.DataModel.ShortUrl] GetShortUrlList(), список неудаленных URL создан.
+2020-04-25 11:23:12.8910 INFO ShortCutURL.Models.DataModel.ShortUrlView Get(Int32), start.
+2020-04-25 11:23:12.8910 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), start.
+2020-04-25 11:23:12.8910 INFO ShortCutURL.Models.DataModel.ShortUrl Get(Int32), сокращенный URL id= 4 найден.
